@@ -14,7 +14,7 @@ See how it worked :
   <img src="https://user-images.githubusercontent.com/6761640/29317470-b58ccf94-81e9-11e7-9599-86905e780e4b.gif" alt=“Facebook Reactions">
 </p>
 
-You can checkout [Youtube] video from here. 
+You can checkout [Youtube] video. 
 
 
 ##DONATIONS
