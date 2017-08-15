@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:textColor="@color/title"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/year"
+            android:textColor="@color/year"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:id="@+id/btLike"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivliketype"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_like"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Like"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:id="@+id/btComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_comment"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Comment"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:id="@+id/btShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_share"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Share"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
