@@ -1,130 +1,11 @@
-# SampleApp
-# Android Project Structure
+# Facebook Reactions
 
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2a8eb532d98842f6966bc164a896419a)](https://www.codacy.com/app/saveendhiman/SampleApp?utm_source=github.com&utm_medium=referral&utm_content=saveendhiman/SampleApp&utm_campaign=badger)
 [![Twitter](https://img.shields.io/badge/Twitter-@saveendhiman-blue.svg?style=flat)](https://twitter.com/saveendhiman)
-
-[![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+Hi guys, I have made sample for facebook reactions on recyclerview for Android. This is the open project for any contributer who want to improve something here.
 
-Hi guys, I have made one Project Structure for Android. This is the open project for any contributer who want to improve something here.
-
-This a Sample Project Structure for Android which you can follow for a clean architecture.
-
-It shows usage of following libraries:
-
-* [Retrofit2] for REST API.
-
-* [RX java] for background process and Retrofit integration.
-
-* [Dagger2] for dependency injection.
-
-* [Firebase] for push notifications.
-
-* [Calligraphy] for font.
-
-* [Picasso] for image loading.
-
-* [Komensky] validations for annotation based validations.
-
-* [Fabric] for crashlytics.
-
-* [Butterknife] for view binding.
-
-* [Timber] for logging.
-
-It uses MVP (Model View Presenter) pattern. MVP is a derivative from the well known MVC (Model View Controller), which for a while now is gaining importance in the development of Android applications.This project also contains basic utility classes required for day to day programming.
-
-
-Location Handling by fused api.
-
-Utils classes.
-
-
-# Here is what the app gradle look likes.
-
-    buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-    }
-
-    dependencies {
-        classpath 'io.fabric.tools:gradle:1.+'
-    }
-    }
-    apply plugin: 'com.android.application'
-    apply plugin: 'io.fabric'
-    apply plugin: 'com.neenbedankt.android-apt'
-    apply plugin: 'me.tatarka.retrolambda'
-
-    android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-
-    //app versioning
-    def versionMajor = 1
-    def versionMinor = 0
-    def versionPatch = 0
-    def versionBuild = 0
-
-    defaultConfig {
-        applicationId "com.sampleapp"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
-        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    }
-
-    repositories {
-    maven {
-        url "https://jitpack.io"
-    }
-    maven { url 'https://maven.fabric.io/public' }
-    }
-
-    dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
-    apt "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
-    provided "org.glassfish:javax.annotation:$rootProject.ext.annotationVersion"
-    compile "com.google.dagger:dagger:$rootProject.daggerVersion"
-    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
-    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
-    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
-    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggerVersion"
-    compile "io.reactivex:rxjava:$rootProject.ext.rxJavaVersion"
-    compile "io.reactivex:rxandroid:$rootProject.ext.rxAndroidVersion"
-    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
-    apt "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
-    compile "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
-    compile "com.google.android.gms:play-services-location:$rootProject.ext.playServiceVersion"
-    compile "com.google.firebase:firebase-messaging:$rootProject.ext.playServiceVersion"
-    compile "com.google.android.gms:play-services-maps:$rootProject.ext.playServiceVersion"
-    compile "uk.co.chrisjenx:calligraphy:$rootProject.ext.calligraphyVersion"
-    compile "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
-    compile "eu.inmite.android.lib:android-validation-komensky:$rootProject.ext.komenskyValidation@aar"
-    compile("com.crashlytics.sdk.android:crashlytics:$rootProject.ext.crashVersion@aar") {
-        transitive = true;
-    }
-	
-    }
-    apply plugin: 'com.google.gms.google-services'
     
 ##DONATIONS
 
@@ -176,15 +57,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 [Saveen Dhiman]:        https://github.com/saveendhiman
 
-[Retrofit2]: 		https://square.github.io/retrofit
-[RX java]:		https://github.com/ReactiveX/RxJava
-[Dagger2]: 		https://google.github.io/dagger
-[Firebase]:             https://firebase.google.com
-[Calligraphy]:          https://github.com/chrisjenx/Calligraphy
-[Picasso]:              http://square.github.io/picasso
-[Komensky]:             https://github.com/inmite/android-validation-komensky
-[Fabric]:               https://get.fabric.io/#
-[Butterknife]:          http://jakewharton.github.io/butterknife
-[Timber]:               https://github.com/JakeWharton/timber
 
 
