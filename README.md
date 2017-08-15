@@ -6,6 +6,11 @@
 
 Hi guys, I have made sample for facebook reactions on recyclerview for Android. This is the open project for any contributer who want to improve something here.
 
+**Reactions** is a fully customizable control to give people more ways to share their reaction in a quick and easy way.
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/798235/19211779/1d4a4d68-8d45-11e6-9b0a-b58a0f4c78ed.gif" alt="Reactions">
+</p>
     
 ##DONATIONS
 
