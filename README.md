@@ -11,7 +11,7 @@ See how it worked :
 **Reactions** is a fully customizable control to give people more ways to share their reaction in a quick and easy way.
     
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/6761640/29317470-b58ccf94-81e9-11e7-9599-86905e780e4b.gif" alt=“Facebook Reactions">
+  <img src="https://user-images.githubusercontent.com/6761640/29324410-9458ddb4-8201-11e7-8a50-2a328544f86e.gif" alt=“Facebook Reactions">
 </p>
 
 You can checkout [Youtube] video. 
