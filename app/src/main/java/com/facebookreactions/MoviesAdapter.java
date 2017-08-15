@@ -17,7 +17,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, year, genre;
+        public TextView title, year, genre, tvlikeview;
         LinearLayout btLike,btComment,btShare;
         ImageView ivliketype;
 
@@ -26,7 +26,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
             title = (TextView) view.findViewById(R.id.title);
             genre = (TextView) view.findViewById(R.id.genre);
             year = (TextView) view.findViewById(R.id.year);
-
+            tvlikeview = (TextView) view.findViewById(R.id.tvlikeview);
             btLike = (LinearLayout) view.findViewById(R.id.btLike);
             btComment = (LinearLayout) view.findViewById(R.id.btComment);
             btShare = (LinearLayout) view.findViewById(R.id.btShare);
@@ -68,44 +68,56 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
         if (movie.getLikeType().equalsIgnoreCase("like")){
             if (movie.getLike() == 0){
                 holder.ivliketype.setImageResource(R.drawable.ic_like);
+                holder.tvlikeview.setText("Like");
             }else{
                 holder.ivliketype.setImageResource(R.drawable.like);
+                holder.tvlikeview.setText("Like");
             }
         }else if (movie.getLikeType().equalsIgnoreCase("love")){
 
             if (movie.getLike() == 0){
                 holder.ivliketype.setImageResource(R.drawable.ic_like);
+                holder.tvlikeview.setText("Like");
             }else{
                 holder.ivliketype.setImageResource(R.drawable.love);
+                holder.tvlikeview.setText("Love");
             }
 
         }else if (movie.getLikeType().equalsIgnoreCase("haha")){
 
             if (movie.getLike() == 0){
                 holder.ivliketype.setImageResource(R.drawable.ic_like);
+                holder.tvlikeview.setText("Like");
             }else{
                 holder.ivliketype.setImageResource(R.drawable.haha);
+                holder.tvlikeview.setText("Haha");
             }
 
         }else if (movie.getLikeType().equalsIgnoreCase("wow")){
 
             if (movie.getLike() == 0){
                 holder.ivliketype.setImageResource(R.drawable.ic_like);
+                holder.tvlikeview.setText("Like");
             }else{
                 holder.ivliketype.setImageResource(R.drawable.wow);
+                holder.tvlikeview.setText("Wow");
             }
         }else if (movie.getLikeType().equalsIgnoreCase("sad")){
             if (movie.getLike() == 0){
                 holder.ivliketype.setImageResource(R.drawable.ic_like);
+                holder.tvlikeview.setText("Like");
             }else{
                 holder.ivliketype.setImageResource(R.drawable.sad);
+                holder.tvlikeview.setText("Sad");
             }
         }else if (movie.getLikeType().equalsIgnoreCase("angry")){
 
             if (movie.getLike() == 0){
                 holder.ivliketype.setImageResource(R.drawable.ic_like);
+                holder.tvlikeview.setText("Like");
             }else{
                 holder.ivliketype.setImageResource(R.drawable.angry);
+                holder.tvlikeview.setText("Angry");
             }
         }
 

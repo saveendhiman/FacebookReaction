@@ -10,6 +10,7 @@ public class Constants {
 
   public static int VERTICAL_SPACING = DisplayUtil.dpToPx(8);
 
-  public static int HEIGHT_VIEW_REACTION = DisplayUtil.dpToPx(70);
+  public static int HEIGHT_VIEW_REACTION = DisplayUtil.dpToPx(105);
 
+  public static final int MAX_ALPHA = 255;
 }

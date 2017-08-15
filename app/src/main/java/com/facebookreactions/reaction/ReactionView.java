@@ -66,12 +66,12 @@ public class ReactionView extends View {
 
     emotions = Arrays.asList(
 
-            new Emotion(getContext(), ContextCompat.getDrawable(getContext(), R.drawable.like)),
-            new Emotion(getContext(), ContextCompat.getDrawable(getContext(), R.drawable.love)),
-            new Emotion(getContext(), ContextCompat.getDrawable(getContext(), R.drawable.haha)),
-            new Emotion(getContext(), ContextCompat.getDrawable(getContext(), R.drawable.wow)),
-            new Emotion(getContext(), ContextCompat.getDrawable(getContext(), R.drawable.sad)),
-            new Emotion(getContext(), ContextCompat.getDrawable(getContext(), R.drawable.angry))
+            new Emotion(getContext(), "Like", ContextCompat.getDrawable(getContext(), R.drawable.like)),
+            new Emotion(getContext(), "Love", ContextCompat.getDrawable(getContext(), R.drawable.love)),
+            new Emotion(getContext(), "Haha", ContextCompat.getDrawable(getContext(), R.drawable.haha)),
+            new Emotion(getContext(), "Wow",ContextCompat.getDrawable(getContext(), R.drawable.wow)),
+            new Emotion(getContext(), "Sorry",ContextCompat.getDrawable(getContext(), R.drawable.sad)),
+            new Emotion(getContext(), "Angry",ContextCompat.getDrawable(getContext(), R.drawable.angry))
        );
 
     selectingAnimation = new SelectingAnimation();

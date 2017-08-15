@@ -13,6 +13,7 @@ import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.facebookreactions.reaction.ReactionView;
+import com.facebookreactions.util.DisplayUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -142,7 +143,9 @@ public class MainActivity extends AppCompatActivity implements  MoviesAdapter.Ho
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         boolean focusable = true;
+
         popupWindow = new PopupWindow(layout, width, height, focusable);
+        popupWindow.setAnimationStyle(R.style.PopupAnimation);
         popupWindow.setOutsideTouchable(true);
         popupWindow.setFocusable(true);
         popupWindow.setTouchable(true);
@@ -151,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements  MoviesAdapter.Ho
             popupWindow.dismiss();
         } else {
 
-            popupWindow.showAsDropDown(anchorView, 0, -(anchorView.getHeight() + 200) );
+            popupWindow.showAsDropDown(anchorView, 0, - DisplayUtil.dpToPx(anchorView.getHeight() + DisplayUtil.dpToPx(8)));
 
         }
     }
