@@ -143,9 +143,7 @@ public class MainActivity extends AppCompatActivity implements  MoviesAdapter.Ho
         int width = LinearLayout.LayoutParams.MATCH_PARENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         boolean focusable = true;
-
         popupWindow = new PopupWindow(layout, width, height, focusable);
-        popupWindow.setAnimationStyle(R.style.PopupAnimation);
         popupWindow.setOutsideTouchable(true);
         popupWindow.setFocusable(true);
         popupWindow.setTouchable(true);
