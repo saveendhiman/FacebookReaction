@@ -84,6 +84,7 @@ public class Emotion {
     imageBound.set((int)x,(int) y, (int)x + size, (int)y + size);
     imageDrawable.setBounds(imageBound);
     imageDrawable.draw(canvas);
+
     drawLabel(canvas);
   }
 

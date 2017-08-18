@@ -1,5 +1,6 @@
 package com.facebookreactions;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -7,9 +8,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.facebookreactions.reaction.ReactionView;
@@ -127,14 +130,43 @@ public class MainActivity extends AppCompatActivity implements  MoviesAdapter.Ho
     }
 
     @Override
-    public void onReactionLongPressClicked(View view, int position, int like) {
+    public void onReactionLongPressClicked(View anchorView, int position, int like) {
 
         this.position = position;
         this.like = like;
 
-        showReactionPopup(view);
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
+            showReactionPopup(anchorView);
+        } else {
+            showReactionPopupPreLollipop(anchorView);
+        }
 
     }
+
+    private void showReactionPopupPreLollipop(View anchorView) {
+
+        View popUpView = getLayoutInflater().inflate(R.layout.popup_view, null);
+        int width = LinearLayout.LayoutParams.MATCH_PARENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+        boolean focusable = true;
+
+        popupWindow = new PopupWindow(popUpView, width, height, focusable);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setFocusable(true);
+        popupWindow.setTouchable(true);
+        ReactionView layout = new ReactionView(MainActivity.this, this);
+
+        RelativeLayout relativeLayout = (RelativeLayout) popUpView.findViewById(R.id.rlpopuplayout);
+        relativeLayout.addView(layout);
+
+        if (popupWindow != null && popupWindow.isShowing()) {
+            popupWindow.dismiss();
+        } else {
+            popupWindow.showAsDropDown(anchorView, 0, -DisplayUtil.dpToPx(anchorView.getHeight() + DisplayUtil.dpToPx(8)));
+        }
+
+    }
+
 
     private void showReactionPopup(View anchorView) {
 
@@ -151,8 +183,14 @@ public class MainActivity extends AppCompatActivity implements  MoviesAdapter.Ho
         if (popupWindow != null && popupWindow.isShowing()) {
             popupWindow.dismiss();
         } else {
+//            if (android.os.Build.VERSION.SDK_INT >= 24) {
+//                int[] a = new int[2];
+//                anchorView.getLocationInWindow(a);
+//                popupWindow.showAtLocation(getWindow().getDecorView(), Gravity.NO_GRAVITY, 0, a[1] - (anchorView.getHeight() + DisplayUtil.dpToPx(8)));
+//            } else {
+                popupWindow.showAsDropDown(anchorView, 0, -DisplayUtil.dpToPx(anchorView.getHeight() + DisplayUtil.dpToPx(8)));
+//            }
 
-            popupWindow.showAsDropDown(anchorView, 0, - DisplayUtil.dpToPx(anchorView.getHeight() + DisplayUtil.dpToPx(8)));
 
         }
     }
